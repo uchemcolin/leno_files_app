@@ -270,10 +270,9 @@ class _ViewFilePageState extends State<ViewFilePage> {
                 String fileName = fileDetails["name"];
                 var fileSize = fileDetails["size"];
                 String fileType = fileDetails["type"];
-                //double fileSizeRounded = double.parse((fileSize).toStringAsFixed(5));
-                //var fileSizeRoundedToString = fileSizeRounded.toString();
+                
                 var fileSizeRoundedToString = fileSize.toString();
-                //String otherInformation = "Type: " +  userFiles[index]["type"] + " | Size: " +  userFiles[index]["size"];
+                
                 String otherInformation = "Type: " +  fileDetails["type"] + "\nSize: " +  fileSizeRoundedToString + "MB";
 
                 return Center(
@@ -469,13 +468,9 @@ class _ViewFilePageState extends State<ViewFilePage> {
                 await Permission.storage.request();
               }
 
-              //http://lenofiles.uchemcolin.xyz/storage/files/LimBlog%20logo_04-01-24_09-52-12.png
-
               String fileDownloadUrl = "http://lenofiles.uchemcolin.xyz/public/storage/files/" + fileName;
 
               print("http://lenofiles.uchemcolin.xyz/public/storage/files/" + fileName);
-
-              //String fileDownloadUrl = "https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w600/2023/10/free-images.jpg";
 
               //You can download a single file
               FileDownloader.downloadFile(
@@ -531,7 +526,6 @@ class _ViewFilePageState extends State<ViewFilePage> {
             label: 'Share',
             onPressed: () async {
 
-              //String fileUrl = "http://lenofiles.uchemcolin.xyz/api/files/view_file/" + fileId.toString();
               String fileUrl = "http://lenofiles.uchemcolin.xyz/files/view_file/" + fileId.toString();
 
               await Share.share('Check out this file uploaded on Leno Files: $fileUrl');
