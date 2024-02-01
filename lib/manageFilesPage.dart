@@ -263,22 +263,10 @@ class _ManageFilesPageState extends State<ManageFilesPage> {
                   itemCount: userFiles.length,
                   itemBuilder: (BuildContext context, int index) {
 
-                    //String other_infomation = "Type: " +  userFilesToDisplay[index]["type"] + " | Size: " +  roundDouble(userFilesToDisplay[index]["size"], 5);
-                    //String otherInformation = "Type: " +  userFiles[index]["type"];
                     int fileId = userFiles[index]["id"];
                     var fileSize = userFiles[index]["size"];
-                    //double fileSize = userFiles[index]["size"];
                     var fileSizeRoundedToString = fileSize.toString();
-                    //double fileSize_rounded = double.parse((fileSize).toStringAsFixed(5));
-                    //var fileSizeRoundedToString = fileSize_rounded.toString();
-                    //var fileSizeRoundedToString = fileSize_rounded.toString();
-                    //var fileSizeRoundedToString = fileSize.toStringAsFixed(5);
-                    //var fileSizeToString = fileSize.toString();
-                    //var fileSizeRoundedToString = fileSizeToString.toStringAsFixed(5);
-                    //double fileSize_rounded = double.parse(fileSize.toStringAsFixed(3)); //3 is decimal length 07034243326
-                    //var fileSizeRoundedToString = fileSize.toStringAsFixed(5);
-                    //String otherInformation = "Type: " +  userFiles[index]["type"] + " | Size: " +  userFiles[index]["size"];
-                    //String otherInformation = "Type: " +  userFiles[index]["type"] + "\nSize: " +  fileSizeRoundedToString + "MB";
+                    
                     String otherInformation = "Size: " +  fileSizeRoundedToString + "MB";
 
                     return ListTile(
@@ -296,20 +284,7 @@ class _ManageFilesPageState extends State<ManageFilesPage> {
                       ),
                       //subtitle: Text('Sample subtitle for item #$index'),
                       subtitle: Text(otherInformation),
-                      /*leading: Container(
-                        height: 50,
-                        width: 50,
-                        color: Colors.amber,
-                      ),*/
                       leading: const Icon(Icons.file_present),
-                      //trailing: const Icon(Icons.edit),
-                      //trailing: const Icon(Icons.more_vert),
-                      /*trailing: TextButton(
-                        onPressed: () {
-                          //
-                        },
-                        child: const Icon(Icons.more_vert)
-                      ),*/
                       trailing: const Icon(Icons.arrow_right)
                     );
                   }, separatorBuilder: (BuildContext context, int index) {
