@@ -139,16 +139,12 @@ class _SearchManageFilesPageState extends State<SearchManageFilesPage> {
             itemCount: userFiles.length,
             itemBuilder: (BuildContext context, int index) {
 
-              //String otherInformation = "Type: " +  userFilesToDisplay[index]["type"] + " | Size: " +  roundDouble(userFilesToDisplay[index]["size"], 5);
-              //String otherInformation = "Type: " +  userFiles[index]["type"];
+              
               int fileId = userFiles[index]["id"];
               var fileSize = userFiles[index]["size"];
-              //double fileSize_rounded = double.parse((fileSize).toStringAsFixed(5));
-              //var fileSizeRoundedToString = fileSize_rounded.toString();
-              //var fileSizeRoundedToString = fileSize.toStringAsFixed(5);
+              
               var fileSizeRoundedToString = fileSize.toString();
-              //String otherInformation = "Type: " +  userFiles[index]["type"] + " | Size: " +  userFiles[index]["size"];
-              //String otherInformation = "Type: " +  userFiles[index]["type"] + "\nSize: " +  fileSizeRoundedToString + "MB";
+              
               String otherInformation = "Size: " +  fileSizeRoundedToString + "MB";
 
               return ListTile(
@@ -167,13 +163,6 @@ class _SearchManageFilesPageState extends State<SearchManageFilesPage> {
                 //subtitle: Text('Sample subtitle for item #$index'),
                 subtitle: Text(otherInformation),
                 leading: const Icon(Icons.file_present),
-                //trailing: const Icon(Icons.more_vert),
-                /*trailing: TextButton(
-                  onPressed: () {
-                    //
-                  },
-                  child: const Icon(Icons.more_vert)
-                ),*/
                 trailing: const Icon(Icons.arrow_right)
               );
             }, separatorBuilder: (BuildContext context, int index) {
