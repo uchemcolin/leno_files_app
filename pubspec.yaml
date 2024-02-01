@@ -44,8 +44,7 @@ dependencies:
   share_plus: ^3.0.4
   path_provider: ^2.0.10
   permission_handler: ^11.0.1 #For more recent devices, worked well on windows desktop too but refused to run on my vivo, complained of needs Android SDK 33 which I feel my phone does not have
-  #permission_handler: ^9.0.1
-  #flowder: ^0.2.0
+  #permission_handler: ^9.0.1 # worked well on my vivo android device, most likely due to lower so it supported lesser than android SDK 33
   #flutter_file_downloader: ^1.0.0 # for downloading files from the internet on android and iOS
   flutter_file_downloader: ^1.2.1 # for downloading files from the internet on android and iOS
 
